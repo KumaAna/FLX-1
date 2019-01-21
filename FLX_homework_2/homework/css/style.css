@@ -5,6 +5,9 @@
     .tm-content-box.flex-2-col .tm-section-title {
         color: blue;
     }
+    .padding-medium {
+        padding: 0;
+      }
     p::first-letter {
         font-size: 30px;
         color: #87CEFA;
@@ -51,16 +54,17 @@
     section {
         position: relative;
     }
-    section::after {
-        content: ''; 
+    section:before {
+        content: "";
         position: absolute;
-        left: 0; 
+        left: 0;
         top: 0;
-        width: 0;
-        height: 0;
-        border-top: 30px solid lightblue; 
-        border-right: 275px solid transparent;
-    }
+        z-index: 1;
+        width: 15rem;
+        height: 7rem;
+        background-color: lightblue;
+        clip-path: polygon(0 0, 0 28%, 100% 0);
+      }
     .tm-content-box.flex-2-col {
         display: flex;
         justify-content: center;
