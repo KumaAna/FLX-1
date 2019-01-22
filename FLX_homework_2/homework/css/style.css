@@ -20,8 +20,10 @@
         align-items: center;
         flex-direction: row;
     }
-    img[alt="epam-mexico"] {
-        width: 90%;
+    .flex-item img {
+        width: 70%;
+        padding-left: 0;
+        padding-right: 0;
     }
     .tm-main-content {
         width: 80%;
@@ -87,14 +89,16 @@
     }
     .padding-medium ol a:hover {
         color: lightblue;
-        text-decoration: underline double;
+        text-decoration: underline;
+        text-decoration-style: double;
     }
-    .padding-medium ol li:first-child::after,
-    .padding-medium ol li:nth-child(3)::after {
-        content: "New";
+    .text:after{
+        content: 'New';
         color: red;
-        font-size: .7em;
-        vertical-align: super;
+        font-size: 11px;
+        position: relative;
+        bottom: 10px;
+        display: inline-block;
     }
     .blocks .boxes.gallery-container .box p {
         line-height: 1.6em;
